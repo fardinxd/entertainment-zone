@@ -1,12 +1,13 @@
 import React, { Fragment } from "react";
 import "./App.scss";
+import Header from "./components/Header/Header";
 
-function App() {
+const App = () => {
   return (
     <Fragment>
-      <h1>Entertainment Zone</h1>
+      <Header />
     </Fragment>
   );
-}
+};
 
 export default App;
