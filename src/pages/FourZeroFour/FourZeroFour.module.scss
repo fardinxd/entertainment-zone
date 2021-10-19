@@ -1,0 +1,27 @@
+.fourZeroFour {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  height: 70px;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  div {
+    font-size: 28px;
+
+    &:first-child {
+      font-weight: 700;
+      color: #1f80e0;
+    }
+
+    &:last-child {
+      font-weight: 400;
+    }
+  }
+}

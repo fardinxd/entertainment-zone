@@ -1,12 +1,13 @@
 import React from "react";
-import "./Header.scss";
+import styles from "./Header.module.scss";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="header">
-      <a href="/" className="logo">
+    <header className={styles.header}>
+      <Link to="/" className={styles.logo}>
         Entertainment Zone
-      </a>
+      </Link>
     </header>
   );
 };
