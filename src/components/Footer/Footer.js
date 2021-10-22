@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Footer.module.scss";
 import { ImFire as TrendingIcon } from "react-icons/im";
 import { MdMovie as MoviesIcon } from "react-icons/md";

@@ -14,10 +14,14 @@
   .logo {
     font-size: 20px;
     font-weight: 700;
+    background-image: linear-gradient(90deg, #1f80e0, #1f80e0);
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
     transition: all 250ms ease-in-out;
 
     &:hover {
-      color: #1f80e0;
+      background-size: 100% 3px;
     }
   }
 }
