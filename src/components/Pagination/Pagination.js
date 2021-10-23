@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Pagination.module.scss";
 import ReactPaginate from "react-paginate";
 
-const Pagination = ({ numberOfPages, setPage }) => {
+const Pagination = ({ numberOfPages = 10, setPage }) => {
   const goToPage = ({ selected }) => {
     window.scroll(0, 0);
     setPage(++selected);

@@ -7,6 +7,7 @@ import axios from "axios";
 const Trending = () => {
   const [content, setContent] = useState([]);
   const [page, setPage] = useState(1);
+  const [numOfPagesAvailable, setNumOfPagesAvailable] = useState();
 
   useEffect(() => {
     const fetchTrending = async () => {
@@ -15,6 +16,8 @@ const Trending = () => {
       );
 
       setContent(data.results);
+
+      setNumOfPagesAvailable(data.total_pages);
     };
 
     fetchTrending();
@@ -39,7 +42,7 @@ const Trending = () => {
           ))}
       </div>
 
-      <Pagination numberOfPages={10} setPage={setPage} />
+      {numOfPagesAvailable > 1 && <Pagination setPage={setPage} />}
     </main>
   );
 };
