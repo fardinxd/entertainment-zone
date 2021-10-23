@@ -1,14 +1,15 @@
+@import "../../App.scss";
+
 .content {
   justify-self: center;
   width: max-content;
   cursor: pointer;
-  overflow: hidden;
   position: relative;
 
   &__image {
     width: 225px;
     height: 300px;
-    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     @media screen and (max-width: 800px) {
       width: 250px;
@@ -63,13 +64,13 @@
   }
 
   &__rating {
-    background-color: #fff;
-    color: #000;
     width: 30px;
     height: 30px;
     font-size: 12px;
     font-weight: 700;
-    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: flex;
     align-items: center;
     justify-content: center;

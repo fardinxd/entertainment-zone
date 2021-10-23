@@ -1,0 +1,86 @@
+@import "../../App.scss";
+
+.pagination {
+  width: 100%;
+  margin: 50px 0;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+
+  @media screen and (max-width: 700px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 550px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 12px;
+  }
+
+  .paginationContainer {
+    width: 80%;
+    max-width: 900px;
+    background-color: $color-nav;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 700px) {
+      width: 90%;
+    }
+
+    @media screen and (max-width: 550px) {
+      width: 100%;
+    }
+
+    li {
+      cursor: pointer;
+    }
+
+    .paginationPrev,
+    .paginationNext {
+      width: 120px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width: 700px) {
+        width: 100px;
+        height: 40px;
+      }
+
+      @media screen and (max-width: 550px) {
+        width: 80px;
+      }
+
+      @media screen and (max-width: 400px) {
+        width: 70px;
+      }
+    }
+
+    .paginationPrev {
+      border-right: 0.1px solid rgba($color-white, 0.5);
+    }
+
+    .paginationNext {
+      border-left: 0.1px solid rgba($color-white, 0.5);
+    }
+
+    .paginationActive {
+      color: $color-primary;
+    }
+
+    .paginationDisabled {
+      cursor: not-allowed;
+      color: rgba($color-white, 0.5);
+    }
+  }
+}

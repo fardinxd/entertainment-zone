@@ -1,22 +1,24 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Trending.module.scss";
 import ContentBox from "../../components/ContentBox/ContentBox";
+import Pagination from "../../components/Pagination/Pagination";
 import axios from "axios";
 
 const Trending = () => {
   const [content, setContent] = useState([]);
-
-  const fetchTrending = async () => {
-    const { data } = await axios.get(
-      `${process.env.REACT_APP_TRENDING_URL}api_key=${process.env.REACT_APP_API_KEY}`
-    );
-
-    setContent(data.results);
-  };
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
+    const fetchTrending = async () => {
+      const { data } = await axios.get(
+        `${process.env.REACT_APP_TRENDING_URL}api_key=${process.env.REACT_APP_API_KEY}&page=${page}`
+      );
+
+      setContent(data.results);
+    };
+
     fetchTrending();
-  }, []);
+  }, [page]);
 
   return (
     <main className={styles.trending}>
@@ -36,6 +38,8 @@ const Trending = () => {
             />
           ))}
       </div>
+
+      <Pagination numberOfPages={10} setPage={setPage} />
     </main>
   );
 };

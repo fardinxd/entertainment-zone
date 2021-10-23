@@ -1,3 +1,5 @@
+@import "../../App.scss";
+
 .fourZeroFour {
   position: absolute;
   top: 50%;
@@ -17,7 +19,7 @@
 
     &:first-child {
       font-weight: 700;
-      color: #1f80e0;
+      color: $color-primary;
     }
 
     &:last-child {
