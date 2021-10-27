@@ -22,6 +22,7 @@ const Footer = () => {
     else return "";
   };
 
+  // JSX \\
   return (
     <footer className={styles.footer}>
       <ul className={styles.footer__list}>

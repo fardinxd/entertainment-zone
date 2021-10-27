@@ -5,10 +5,12 @@ import Pagination from "../../components/Pagination/Pagination";
 import axios from "axios";
 
 const Trending = () => {
+  // Trending Contents & Pagination State \\
   const [content, setContent] = useState([]);
   const [page, setPage] = useState(1);
   const [numOfPagesAvailable, setNumOfPagesAvailable] = useState();
 
+  // Fetch Trending Contents \\
   useEffect(() => {
     const fetchTrending = async () => {
       const { data } = await axios.get(
@@ -23,6 +25,7 @@ const Trending = () => {
     fetchTrending();
   }, [page]);
 
+  // JSX \\
   return (
     <main className={styles.trending}>
       <h1 className="page-title">TRENDING TODAY</h1>

@@ -5,6 +5,7 @@ import { img_300, posterUnavailable } from "../../config/config";
 const ContentBox = ({ id, poster, title, type, date, rating }) => {
   const contentTitle = title.length > 20 ? `${title.slice(0, 18)}...` : title;
 
+  // JSX \\
   return (
     <div className={styles.content}>
       <img

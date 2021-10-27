@@ -8,13 +8,14 @@ const Pagination = ({ numberOfPages = 10, setPage }) => {
     setPage(++selected);
   };
 
+  // JSX \\
   return (
     <div className={styles.pagination}>
       <ReactPaginate
+        onPageChange={goToPage}
         pageCount={numberOfPages}
         marginPagesDisplayed={2}
         pageRangeDisplayed={1}
-        onPageChange={goToPage}
         previousLabel="Previous"
         nextLabel="Next"
         containerClassName={styles.paginationContainer}

@@ -7,8 +7,9 @@
   justify-content: center;
   overflow: hidden;
 
-  &List {
+  &__list {
     width: 100%;
+    margin-bottom: 50px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     row-gap: 50px;

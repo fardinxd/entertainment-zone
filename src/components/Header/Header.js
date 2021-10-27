@@ -3,6 +3,7 @@ import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  // JSX \\
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>
