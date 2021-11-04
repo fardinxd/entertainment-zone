@@ -1,0 +1,32 @@
+@import "../../App.scss";
+
+.search__tabs {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  display: flex;
+  cursor: pointer;
+
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 12px;
+  }
+
+  .tab {
+    flex-grow: 1;
+    padding: 10px 0;
+    border-bottom: 2px solid $color-white;
+    transition: all 250ms ease-in-out;
+    position: relative;
+
+    &_active {
+      color: $color-primary;
+      border-bottom: 2px solid $color-primary;
+    }
+  }
+}
