@@ -1,4 +1,6 @@
 import React from "react";
+
+// Style \\
 import styles from "./SearchTab.module.scss";
 
 const SearchTab = ({

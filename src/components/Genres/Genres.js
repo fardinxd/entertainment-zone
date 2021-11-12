@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
+
+// Style \\
 import styles from "./Genres.module.scss";
-import axios from "axios";
 
 const Genres = ({
   type,
@@ -8,11 +9,13 @@ const Genres = ({
   setGenres,
   selectedGenres,
   setSelectedGenres,
+  setPage,
 }) => {
   // On Select Genre \\
   const handleAdd = (genre) => {
     setSelectedGenres([...selectedGenres, genre]);
     setGenres(genres.filter((existingGenre) => existingGenre.id !== genre.id));
+    setPage(1);
   };
 
   // On Remove Genre \\
@@ -21,15 +24,16 @@ const Genres = ({
       selectedGenres.filter((existingGenre) => existingGenre.id !== genre.id)
     );
     setGenres([...genres, genre]);
+    setPage(1);
   };
 
   // Fetch Genres \\
   useEffect(() => {
     const fetchGenres = async () => {
-      const { data } = await axios.get(
+      const res = await fetch(
         `${process.env.REACT_APP_GENRES_URL}/${type}/list?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
       );
-
+      const data = await res.json();
       setGenres(data.genres);
     };
 

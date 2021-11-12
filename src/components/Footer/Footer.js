@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { Link, useHistory } from "react-router-dom";
+
+// Style \\
 import styles from "./Footer.module.scss";
+
+// Icons \\
 import { ImFire as TrendingIcon } from "react-icons/im";
 import { MdMovie as MoviesIcon } from "react-icons/md";
 import { FiMonitor as TvIcon } from "react-icons/fi";
 import { BiSearch as SearchIcon } from "react-icons/bi";
-import { Link, useHistory } from "react-router-dom";
 
 const Footer = () => {
   const history = useHistory();

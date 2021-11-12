@@ -1,5 +1,9 @@
 import React from "react";
+
+// Style \\
 import styles from "./SearchInput.module.scss";
+
+// Icon \\
 import { BiSearchAlt as SearchIcon } from "react-icons/bi";
 
 const SearchInput = ({

@@ -1,37 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+
+// Style \\
 import styles from "./Trending.module.scss";
+
+// Custom Hook \\
+import { useFetch } from "../../hooks/useFetch";
+
+// Components \\
+import ContentBoxContainer from "../../components/ContentBoxContainer/ContentBoxContainer";
 import ContentBox from "../../components/ContentBox/ContentBox";
 import Pagination from "../../components/Pagination/Pagination";
-import axios from "axios";
 
 const Trending = () => {
-  // Trending Contents & Pagination State \\
-  const [content, setContent] = useState([]);
+  // Active Page State \\
   const [page, setPage] = useState(1);
-  const [numOfPagesAvailable, setNumOfPagesAvailable] = useState();
 
-  // Fetch Trending Contents \\
-  useEffect(() => {
-    const fetchTrending = async () => {
-      const { data } = await axios.get(
-        `${process.env.REACT_APP_TRENDING_URL}api_key=${process.env.REACT_APP_API_KEY}&page=${page}`
-      );
-
-      setContent(data.results);
-
-      setNumOfPagesAvailable(data.total_pages);
-    };
-
-    fetchTrending();
-  }, [page]);
+  // Fetching Trending Contents With Custom Hook 'useFetch' \\
+  const { content, numOfPagesAvailable, isPending, error } = useFetch(
+    `${process.env.REACT_APP_TRENDING_URL}api_key=${process.env.REACT_APP_API_KEY}&page=${page}`
+  );
 
   // JSX \\
   return (
     <main className={styles.trending}>
       <h1 className="page-title">TRENDING TODAY</h1>
 
-      <div className={styles.trending__contents}>
-        {content &&
+      {isPending && <div className="loading"></div>}
+
+      {error && <div className="error">{error}</div>}
+
+      <ContentBoxContainer>
+        {!isPending &&
+          !error &&
+          content &&
           content.map((movie) => (
             <ContentBox
               key={movie.id}
@@ -43,9 +44,11 @@ const Trending = () => {
               rating={movie.vote_average}
             />
           ))}
-      </div>
+      </ContentBoxContainer>
 
-      {numOfPagesAvailable > 1 && <Pagination setPage={setPage} />}
+      {!error && content && numOfPagesAvailable > 1 && (
+        <Pagination setPage={setPage} />
+      )}
     </main>
   );
 };

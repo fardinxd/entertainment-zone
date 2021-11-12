@@ -3,33 +3,11 @@
 .search {
   margin-bottom: 130px;
 
-  &__content {
-    width: 100%;
-    margin-bottom: 50px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    row-gap: 50px;
-
-    @media screen and (max-width: 1350px) {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    @media screen and (max-width: 1050px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    @media screen and (max-width: 800px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media screen and (max-width: 370px) {
-      grid-template-columns: 1fr;
-    }
-  }
-
   &__something,
   &__error {
+    color: $color-white;
     text-align: center;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 1px;
   }

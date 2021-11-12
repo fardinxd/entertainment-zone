@@ -1,5 +1,9 @@
 import React from "react";
+
+// Style \\
 import styles from "./ContentBox.module.scss";
+
+// Images \\
 import { img_300, posterUnavailable } from "../../config/config";
 
 const ContentBox = ({ id, poster, title, type, date, rating }) => {
