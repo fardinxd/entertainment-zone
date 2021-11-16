@@ -1,11 +1,18 @@
 import React from "react";
+
+// Style \\
 import styles from "./Home.module.scss";
 
+// Components \\
+import HeroSlider from "../../components/HeroSlider/HeroSlider";
+
 const Home = () => {
+  // JSX \\
   return (
-    <main className={styles.home}>
-      <h1>HOME PAGE</h1>
-    </main>
+    <React.Fragment>
+      <HeroSlider />
+      <main className={styles.home}></main>
+    </React.Fragment>
   );
 };
 
