@@ -41,7 +41,9 @@
     }
 
     li {
-      cursor: pointer;
+      @media screen and (min-width: 600px) {
+        cursor: pointer;
+      }
     }
 
     .paginationPrev,

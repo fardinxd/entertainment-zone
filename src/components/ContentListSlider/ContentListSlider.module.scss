@@ -1,0 +1,41 @@
+@import "../../App.scss";
+
+.content_list {
+  padding: 15px 0;
+
+  a {
+    width: max-content;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 6px 10px;
+    display: flex;
+    transition: all 200ms ease-in-out;
+
+    @media screen and (max-width: 600px) {
+      cursor: default;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    svg {
+      align-self: center;
+      margin-left: 8px;
+    }
+  }
+
+  &_img {
+    height: 100%;
+    border-radius: 5px;
+    margin-left: 5px;
+    transition: all 250ms ease-in-out;
+
+    @media screen and (min-width: 600px) {
+      &:hover {
+        transform: scale(0.9);
+        cursor: pointer;
+      }
+    }
+  }
+}

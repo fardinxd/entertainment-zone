@@ -22,7 +22,6 @@ html {
 }
 
 body {
-  min-height: calc(100vh - 140px);
   margin: 60px 0 80px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -31,8 +30,7 @@ body {
   color: $color-white;
 
   @media screen and (max-width: 500px) {
-    min-height: calc(100vh - 120px);
-    margin-bottom: 60px;
+    margin: 60px 0 60px;
   }
 }
 
@@ -52,7 +50,7 @@ img {
 
 main {
   width: 95%;
-  max-width: 1500px;
+  max-width: 2000px;
   margin: 0 auto;
 }
 

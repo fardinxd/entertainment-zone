@@ -96,7 +96,7 @@ const Search = () => {
 
       {!isPending && !error && !searchText && content.length === 0 && (
         <p className={styles.search__something}>
-          Search any {activeTab === 1 ? "movie" : "series"}
+          Search Any {activeTab === 1 ? "Movie" : "Series"}
         </p>
       )}
 

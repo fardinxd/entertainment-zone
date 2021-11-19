@@ -17,13 +17,13 @@
     font-size: 20px;
     font-weight: 700;
     background-image: linear-gradient(90deg, $color-primary, $color-primary);
-    background-size: 0% 3px;
+    background-size: 100% 3px;
     background-repeat: no-repeat;
     background-position: left bottom;
     transition: all 250ms ease-in-out;
 
-    &:hover {
-      background-size: 100% 3px;
+    @media screen and (max-width: 600px) {
+      cursor: default;
     }
   }
 }

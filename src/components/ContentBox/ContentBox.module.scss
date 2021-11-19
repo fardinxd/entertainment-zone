@@ -3,8 +3,11 @@
 .content {
   justify-self: center;
   width: max-content;
-  cursor: pointer;
   position: relative;
+
+  @media screen and (min-width: 600px) {
+    cursor: pointer;
+  }
 
   &__image {
     width: 225px;
