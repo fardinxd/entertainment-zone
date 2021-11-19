@@ -1,4 +1,4 @@
-export const heroSliderUrl = `${process.env.REACT_APP_SEARCH_URL}movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=wwe&page=1`;
+export const heroSliderUrl = `${process.env.REACT_APP_SEARCH_URL}movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=nxt&page=1`;
 
 export const contentListSliderData = [
   {

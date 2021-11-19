@@ -29,11 +29,11 @@ const Footer = () => {
   // JSX \\
   return (
     <footer className={styles.footer}>
-      <ul className={styles.footer__list}>
+      <ul className={styles.footer_list}>
         <li>
           <Link
             to="/trending"
-            className={`${styles.footer__listItem} ${activate("/trending")}`}
+            className={`${styles.footer_list_item} ${activate("/trending")}`}
           >
             <div className={styles.icon}>
               <TrendingIcon />
@@ -45,7 +45,7 @@ const Footer = () => {
         <li>
           <Link
             to="/movies"
-            className={`${styles.footer__listItem} ${activate("/movies")}`}
+            className={`${styles.footer_list_item} ${activate("/movies")}`}
           >
             <div className={styles.icon}>
               <MoviesIcon />
@@ -57,7 +57,7 @@ const Footer = () => {
         <li>
           <Link
             to="/series"
-            className={`${styles.footer__listItem} ${activate("/series")}`}
+            className={`${styles.footer_list_item} ${activate("/series")}`}
           >
             <div className={styles.icon}>
               <TvIcon />
@@ -69,7 +69,7 @@ const Footer = () => {
         <li>
           <Link
             to="/search"
-            className={`${styles.footer__listItem} ${activate("/search")}`}
+            className={`${styles.footer_list_item} ${activate("/search")}`}
           >
             <div className={styles.icon}>
               <SearchIcon />

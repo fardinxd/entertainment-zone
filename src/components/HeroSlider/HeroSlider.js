@@ -23,7 +23,7 @@ const HeroSlider = ({ url }) => {
   return (
     <Splide options={{ ...settings }}>
       {content &&
-        content.slice(1, 5).map((data, i) => (
+        content.slice(0, 5).map((data, i) => (
           <SplideSlide key={i}>
             <div className={styles.slider_container}>
               <img

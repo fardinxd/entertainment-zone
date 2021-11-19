@@ -12,16 +12,20 @@
   justify-content: center;
   z-index: 100;
 
-  &__list {
+  &_list {
     width: 100%;
     max-width: 800px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    &Item {
-      height: 80px;
+    @media screen and (max-width: 400px) {
+      justify-content: space-around;
+    }
+
+    &_item {
       width: 100px;
+      height: 70px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -33,32 +37,46 @@
         cursor: default;
       }
 
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 700px) {
         height: 60px;
+      }
+
+      @media screen and (max-width: 400px) {
+        width: max-content;
+        height: 55px;
       }
 
       .icon {
         font-size: 20px;
 
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 700px) {
           font-size: 18px;
         }
 
         @media screen and (max-width: 400px) {
           font-size: 16px;
         }
+
+        @media screen and (max-width: 350px) {
+          font-size: 14px;
+        }
       }
 
       .title {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 700;
+        line-height: 1;
 
-        @media screen and (max-width: 500px) {
-          font-size: 14px;
+        @media screen and (max-width: 700px) {
+          font-size: 13px;
         }
 
         @media screen and (max-width: 400px) {
           font-size: 12px;
+        }
+
+        @media screen and (max-width: 350px) {
+          font-size: 10px;
         }
       }
     }
