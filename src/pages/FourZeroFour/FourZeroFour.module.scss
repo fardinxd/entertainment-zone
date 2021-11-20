@@ -19,7 +19,7 @@
 
     &:first-child {
       font-weight: 700;
-      color: $color-primary;
+      color: var(--color-primary);
     }
 
     &:last-child {

@@ -25,7 +25,7 @@
   .paginationContainer {
     width: 80%;
     max-width: 900px;
-    background-color: $color-nav;
+    background-color: var(--color-nav);
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     display: flex;
@@ -69,20 +69,20 @@
     }
 
     .paginationPrev {
-      border-right: 0.1px solid rgba($color-white, 0.5);
+      border-right: 0.1px solid rgba(var(--color-white-rgb), 0.5);
     }
 
     .paginationNext {
-      border-left: 0.1px solid rgba($color-white, 0.5);
+      border-left: 0.1px solid rgba(var(--color-white-rgb), 0.5);
     }
 
     .paginationActive {
-      color: $color-primary;
+      color: var(--color-primary);
     }
 
     .paginationDisabled {
       cursor: not-allowed;
-      color: rgba($color-white, 0.5);
+      color: rgba(var(--color-white-rgb), 0.5);
     }
   }
 }

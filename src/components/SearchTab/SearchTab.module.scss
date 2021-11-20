@@ -23,13 +23,13 @@
   .tab {
     flex-grow: 1;
     padding: 10px 0;
-    border-bottom: 2px solid $color-white;
+    border-bottom: 2px solid var(--color-white);
     transition: all 250ms ease-in-out;
     position: relative;
 
     &_active {
-      color: $color-primary;
-      border-bottom: 2px solid $color-primary;
+      color: var(--color-primary);
+      border-bottom: 2px solid var(--color-primary);
     }
   }
 }

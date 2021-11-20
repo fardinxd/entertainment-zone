@@ -9,7 +9,8 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>
-        Entertainment Zone
+        <span>E</span>
+        <span>zone</span>
       </Link>
     </header>
   );

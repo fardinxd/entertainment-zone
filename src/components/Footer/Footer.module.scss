@@ -1,7 +1,7 @@
 @import "../../App.scss";
 
 .footer {
-  background-color: $color-nav;
+  background-color: var(--color-nav);
   box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.4);
   position: fixed;
   bottom: 0;
@@ -84,5 +84,5 @@
 }
 
 .active {
-  color: $color-primary;
+  color: var(--color-primary);
 }

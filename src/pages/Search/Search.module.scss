@@ -5,7 +5,7 @@
 
   &__something,
   &__error {
-    color: $color-white;
+    color: var(--color-white);
     text-align: center;
     font-size: 14px;
     font-weight: 700;
