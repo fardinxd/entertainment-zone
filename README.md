@@ -1,4 +1,4 @@
-# Entertainment Zone
+# Entertainment Zone [Live Preview](https://the-entertainment-zone.netlify.app/)
 
 ![Entertainment Zone](public/thumbnail.png)
 
@@ -28,7 +28,7 @@
 1. yarn
 2. yarn start
 
-## `Find me on`
+## `Connect With Me`
 
 <a href = "https://www.linkedin.com/in/fardinxd/"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/></a>
 <a href = "https://twitter.com/fardin_xd"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
