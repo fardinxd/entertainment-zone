@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useFetch = (url) => {
+export const useFetchContent = (url) => {
   const [content, setContent] = useState(null);
   const [numOfPagesAvailable, setNumOfPagesAvailable] = useState();
   const [isPending, setIsPending] = useState(false);

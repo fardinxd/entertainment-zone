@@ -1,0 +1,18 @@
+.cast_photo {
+  margin: 2px 0 2px 5px;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 2px 1px;
+
+  @media screen and (min-width: 600px) {
+    cursor: pointer;
+  }
+}
+
+.cast_name {
+  font-size: 13px;
+  font-weight: 700;
+
+  @media screen and (max-width: 900px) {
+    font-size: 12px;
+  }
+}

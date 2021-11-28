@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import styles from "./Movies.module.scss";
 
 // Custom Hooks \\
-import { useFetch } from "../../hooks/useFetch";
+import { useFetchContent } from "../../hooks/useFetchContent";
 import { useGenres } from "../../hooks/useGenres";
 
 // Components \\
@@ -24,8 +24,8 @@ const Movies = () => {
   // Active Page State \\
   const [page, setPage] = useState(1);
 
-  // Fetching Movies Contents With Custom Hook 'useFetch' \\
-  const { content, numOfPagesAvailable, isPending, error } = useFetch(
+  // Fetching Movies Contents With Custom Hook 'useFetchContent' \\
+  const { content, numOfPagesAvailable, isPending, error } = useFetchContent(
     `${process.env.REACT_APP_MOVIES_URL}api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreURL}`
   );
 

@@ -1,5 +1,8 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+// Contexts \\
+import { ContentDetailsContext } from "./context/ContentDetailsProvider";
 
 // Style \\
 import "./App.scss";
@@ -7,6 +10,7 @@ import "./App.scss";
 // Components \\
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import ContentDetails from "./components/ContentDetails/ContentDetails";
 
 // Pages \\
 import Home from "./pages/Home/Home";
@@ -18,6 +22,9 @@ import FourZeroFour from "./pages/FourZeroFour/FourZeroFour";
 
 // JSX \\
 const App = () => {
+  // Contexts \\
+  const { showContentModal } = useContext(ContentDetailsContext);
+
   return (
     <Router>
       <Fragment>
@@ -31,6 +38,7 @@ const App = () => {
           <Route path="/*" component={FourZeroFour} />
         </Switch>
         <Footer />
+        {showContentModal && <ContentDetails />}
       </Fragment>
     </Router>
   );

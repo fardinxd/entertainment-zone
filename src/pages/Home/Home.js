@@ -7,7 +7,7 @@ import styles from "./Home.module.scss";
 import HeroSlider from "../../components/HeroSlider/HeroSlider";
 import ContentListSlider from "../../components/ContentListSlider/ContentListSlider";
 
-// Slider Data \\
+// Sliders Data \\
 import { heroSliderUrl } from "./HomeSlidersData";
 import { contentListSliderData } from "./HomeSlidersData";
 

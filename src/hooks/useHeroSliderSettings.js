@@ -25,9 +25,6 @@ export const useHeroSliderSettings = () => {
     pagination: false,
     arrows: width > 600 ? true : false,
     type: "loop",
-    rewind: true,
-    autoplay: true,
-    interval: 2500,
     gap: sliderGap,
     padding: sliderPadding,
   };

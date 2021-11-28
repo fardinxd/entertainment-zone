@@ -1,0 +1,131 @@
+@import "../../App.scss";
+
+.details {
+  height: 100%;
+  position: relative;
+
+  &_backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  &_container {
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    display: flex;
+
+    @media screen and (max-width: 900px) {
+      background: transparent;
+      display: block;
+    }
+  }
+
+  &_poster {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 15px 0;
+    }
+
+    img {
+      width: 85%;
+      box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 5px 3px;
+
+      @media screen and (max-width: 900px) {
+        width: 300px;
+      }
+
+      @media screen and (max-width: 700px) {
+        width: 240px;
+      }
+    }
+  }
+
+  &_information {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 15px 0;
+    }
+
+    .title_tagline {
+      margin-bottom: 15px;
+
+      .title {
+        font-size: 40px;
+        line-height: 1;
+        margin-bottom: 5px;
+
+        @media screen and (max-width: 900px) {
+          font-size: 30px;
+        }
+      }
+
+      .tagline {
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+    }
+
+    .genre_language_release {
+      margin-bottom: 15px;
+      font-weight: 700;
+
+      .genre span:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      .language span:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      .release {
+        font-weight: 400;
+      }
+    }
+
+    .overview {
+      font-size: 16px;
+      width: 95%;
+      margin: 0 auto 15px;
+
+      @media screen and (max-width: 600px) {
+        font-size: 15px;
+      }
+    }
+
+    .trailer {
+      background-color: var(--color-primary);
+      font-size: 16px;
+      width: max-content;
+      margin: 15px auto 0;
+      padding: 5px 20px;
+      border-radius: 3px;
+
+      @media screen and (max-width: 900px) {
+        cursor: default;
+      }
+    }
+  }
+}

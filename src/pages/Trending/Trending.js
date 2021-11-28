@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import styles from "./Trending.module.scss";
 
 // Custom Hook \\
-import { useFetch } from "../../hooks/useFetch";
+import { useFetchContent } from "../../hooks/useFetchContent";
 
 // Components \\
 import ContentBoxContainer from "../../components/ContentBoxContainer/ContentBoxContainer";
@@ -15,8 +15,8 @@ const Trending = () => {
   // Active Page State \\
   const [page, setPage] = useState(1);
 
-  // Fetching Trending Contents With Custom Hook 'useFetch' \\
-  const { content, numOfPagesAvailable, isPending, error } = useFetch(
+  // Fetching Trending Contents With Custom Hook 'useFetchContent' \\
+  const { content, numOfPagesAvailable, isPending, error } = useFetchContent(
     `${process.env.REACT_APP_TRENDING_URL}api_key=${process.env.REACT_APP_API_KEY}&page=${page}`
   );
 

@@ -21,10 +21,7 @@ const Footer = () => {
     });
   }, [history]);
 
-  const activate = (pathname) => {
-    if (activePage === pathname) return styles.active;
-    else return "";
-  };
+  const activate = (pathname) => (activePage === pathname ? styles.active : "");
 
   // JSX \\
   return (

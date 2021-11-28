@@ -29,6 +29,12 @@
       cursor: pointer;
     }
 
+    @media screen and (max-width: 600px) {
+      text-align: center;
+      margin: 5px 8px;
+      flex-grow: 1;
+    }
+
     &:hover {
       border-color: rgba(var(--color-primary-rgb), 1);
     }
